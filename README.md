@@ -203,11 +203,54 @@ Sensitive credentials such as database passwords, API keys, JWT secrets, Cloudin
 
 ---
 
-## 💳 Payment Integration
+## 💳 Payment Integration — Razorpay Test Mode
 
 Docly integrates **Razorpay** for online appointment payments.
 
-Users can make payments for their appointments through the application.
+The application currently uses **Razorpay Test Mode**, so all payments are simulated and **no real money is deducted**.
+
+### 🧪 Test Payment Credentials
+
+For testing a successful UPI payment:
+
+**UPI ID:** `success@razorpay`
+
+For testing a failed payment:
+
+**UPI ID:** `failure@razorpay`
+
+### How to Test
+
+1. Open the Patient Application:
+   https://docly-frontend.vercel.app
+
+2. Login/Register as a patient.
+
+3. Select a doctor and book an appointment.
+
+4. Proceed to payment.
+
+5. Select **UPI** as the payment method.
+
+6. Enter:
+
+   `success@razorpay`
+
+7. Complete the test payment flow.
+
+### ⚠️ Important
+
+This project is currently configured with Razorpay **Test Mode** credentials.
+
+- No real money is involved.
+- Payments are simulated.
+- Test Mode is intended for development and demonstration.
+- Razorpay Test Mode uses separate test API keys from Live Mode.
+- Razorpay secret keys are stored securely as environment variables and are **not included in this public repository**.
+
+Official Razorpay Test Payment Documentation:
+
+https://razorpay.com/docs/payments/payments/test-upi-details/
 
 ---
 
