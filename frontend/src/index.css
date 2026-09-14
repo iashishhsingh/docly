@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+*{
+  font-family: Outfit;
+}
+
+@theme {
+  --color-primary: #004aad;
+}
+
+.active hr{
+  @apply block
+}
+
+@media (max-width:740px) {
+  .active p{
+    @apply text-white bg-primary
+  }
+}
+
+@layer utilities {
+  
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
